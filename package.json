@@ -1,0 +1,27 @@
+{
+  "name": "st_qa",
+  "version": "2.2.0",
+  "description": "This is Volta Truck Service Took cypress project",
+  "main": "index.js",
+  "scripts": {
+    "cypress:runner": "cypress open --e2e --browser electron",
+    "cypress:execution": "cypress run --spec cypress/e2e/features/*",
+    "cypress:execution-report": "cypress run --spec cypress/e2e/features/* && node cucumber-html-report.js",
+    "cypress:execution-tags": "cypress run --env tags=@ui"
+  },
+  "keywords": [
+    "cypress"
+  ],
+  "author": "cucumber",
+  "license": "ISC",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^15.0.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
+    "cypress": "^12.17.4",
+    "esbuild": "^0.16.4",
+    "multiple-cucumber-html-reporter": "^3.0.1"
+  },
+  "dependencies": {
+    "cypress-xpath": "^2.0.1"
+  }
+}
